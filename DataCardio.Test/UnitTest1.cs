@@ -12,14 +12,33 @@ namespace DataCardio.Test
         [DataRow(25, 195, 136.5, 175.5)]                   // per i battiti massimi frequenza * 0.9
         [DataRow(30, 190, 133, 171)]
         [DataRow(50, 170, 119, 153)]
-        public void TestMethod1(int età, int frequenza, double battiti_Min_aspettati, double battiti_Max_aspettati)                       
+        public void TestMethod1(int età, int frequenza, double battiti_Min_aspettati, double battiti_Max_aspettati)
         {
 
-           double battiti_Min_calcolati = CardioLibrary.DataCardio.battiti_Min(età);
-           Assert.AreEqual(battiti_Min_calcolati, battiti_Min_aspettati);
+            double battiti_Min_calcolati = CardioLibrary.DataCardio.battiti_Min(età);
+            Assert.AreEqual(battiti_Min_calcolati, battiti_Min_aspettati);
 
             double battiti_Max_calcolati = CardioLibrary.DataCardio.battiti_Max(età);
             Assert.AreEqual(battiti_Max_calcolati, battiti_Max_aspettati);
         }
+
+
+        [DataTestMethod]                // valori di frequenza cardiaca
+        [DataRow(59, 65, 110)]        // bradicardia,normale,tachicardia
+        [DataRow(30, 82, 120)]                    
+        [DataRow(10, 95, 140)]                   
+        public void TestMethod2(double bradicardia, double normale, double tachicardia)
+        {
+
+
+
+        }
+
+
+
+
+
+
+
     } 
 }
