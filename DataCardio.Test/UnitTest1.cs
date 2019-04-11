@@ -24,12 +24,12 @@ namespace DataCardio.Test
 
 
         [DataTestMethod]                // valori di frequenza cardiaca
-        [DataRow(59, 65, 110)]        // bradicardia,normale,tachicardia
-        [DataRow(30, 82, 120)]                    
-        [DataRow(10, 95, 140)]                   
-        public void TestMethod2(double bradicardia, double normale, double tachicardia)
+        [DataRow(59)]                  // battiti
+        [DataRow(70)]                    
+        [DataRow(110)]                   
+        public void TestMethod2(double battiti)
         {
-
+            double battiti_aspettati = CardioLibrary.DataCardio.frequenza_cardiaca(battiti);
 
 
         }

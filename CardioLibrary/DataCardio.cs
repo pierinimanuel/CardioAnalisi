@@ -8,6 +8,8 @@ namespace CardioLibrary
 {
     public class DataCardio
     {
+
+        // primo script
         public static double battiti_Min (int età)
         {
             int frequenza = 220 - età;
@@ -23,6 +25,28 @@ namespace CardioLibrary
         }
 
 
+        // secondo script
+        public static string frequenza_cardiaca(double battiti)
+        {
+            string risultato = "";
+            if (battiti < 60)
+            {
+                risultato = "bradicardia";
+            }
+
+            if(battiti>60 && battiti < 100)
+            {
+                risultato = "normale";
+            }
+
+            if (battiti>100)
+            {
+                risultato = "tachicardico";
+            }
+
+            return risultato;
+
+        }
 
     }
 }
