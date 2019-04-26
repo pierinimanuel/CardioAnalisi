@@ -34,10 +34,23 @@ namespace DataCardio.Test
         }
 
 
+		//  3 script
+
+		[DataTestMethod]
+		[DataRow("M", 30, 45, 59)] //sesso, frequenza cardiaca media, peso, anni, durata sessione
+        [DataRow("F", 30, 45, 59)]
+         public void TestCalorieBruciate(string sesso, double Frequenza_Cardiaca, double peso, int anni, double tempo, double calorie_bruciate_aspettate)
+
+		{
+			calorie_bruciate = CardioLibrary.DataCardio.CalorieBruciate(sesso, Frequenza_Cardiaca, peso, anni, tempo);
+
+			Asssert.AreEqual(calorie_bruciate_aspettate, calorie_bruciate);
+		}
 
 
 
 
 
-    } 
+
+	}
 }
