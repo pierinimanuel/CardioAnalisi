@@ -69,5 +69,30 @@ namespace CardioLibrary
 
 			return calorie_bruciate;
 		}
+
+
+
+
+
+		public static double SpesaEnergetica(string attività, double km_percorsi, double peso_corporeo)
+		{
+			Double risultato = 0;
+			if (attività ==”corsa”)
+{
+				Risultato = (0.9 * km_percorsi) * peso_corporeo;
+			}
+			if (attività ==”camminata”)
+{
+				Risultato = (0.50 * km_percorsi) * peso_corporeo;
+			}
+			Return risultato;
+		}
+
+
+
+
+
+
+
 	}
 }
