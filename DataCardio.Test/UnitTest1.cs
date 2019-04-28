@@ -50,8 +50,8 @@ namespace DataCardio.Test
 
 		// Script 4
 		[DataTestMethod]
-		[DataRow(“corsa”, 8, 70, 730)]   //  tipologia attività, km percorsi, peso corporeo, spesa energetica
-		[DataRow(“camminata”, 5, 80, 700)] // tipologia attività, km percorsi, peso corporeo, spesa energetica
+		[DataRow("corsa", 8, 70, 730)]   //  tipologia attività, km percorsi, peso corporeo, spesa energetica
+		[DataRow("camminata", 5, 80, 700)] // tipologia attività, km percorsi, peso corporeo, spesa energetica
 		public void TestSpesaEnergetica(string attività, double km_percorsi, double peso_corporeo, double spesa_energetica_aspettata)
 		{
 			Double spesa_energetica = CardioLibrary.DataCardio.SpesaEnergetica(attività, peso_corporeo, km_percorsi);

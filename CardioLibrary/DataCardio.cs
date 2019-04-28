@@ -72,27 +72,21 @@ namespace CardioLibrary
 
 
 
-
+		// quarto script
 
 		public static double SpesaEnergetica(string attività, double km_percorsi, double peso_corporeo)
 		{
 			Double risultato = 0;
-			if (attività ==”corsa”)
-{
-				Risultato = (0.9 * km_percorsi) * peso_corporeo;
+			if (attività =="corsa")
+            {
+				risultato = (0.9 * km_percorsi) * peso_corporeo;
 			}
-			if (attività ==”camminata”)
-{
-				Risultato = (0.50 * km_percorsi) * peso_corporeo;
+			if (attività =="camminata")
+            {
+				risultato = (0.50 * km_percorsi) * peso_corporeo;
 			}
-			Return risultato;
-		}
+			return risultato;
+		    }
 
-
-
-
-
-
-
-	}
+         }
 }
