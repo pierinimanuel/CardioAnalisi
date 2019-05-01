@@ -77,18 +77,18 @@ namespace CardioLibrary
 		public static double SpesaEnergetica(string attività, double km_percorsi, double peso_corporeo)
 		{
 			Double risultato = 0;
-			if (attività =="corsa")
-            {
+			if (attività == "corsa")
+			{
 				risultato = (0.9 * km_percorsi) * peso_corporeo;
 			}
-			if (attività =="camminata")
-            {
+			if (attività == "camminata")
+			{
 				risultato = (0.50 * km_percorsi) * peso_corporeo;
 			}
 			return risultato;
-		    }
+		}
 
-         }
+	}
 
 
 	// Script 5 media giornaliera dei battiti cardiaci
@@ -96,9 +96,44 @@ namespace CardioLibrary
 
 	public static double BattitiGiornalieri(double battti_riposo, double battiti_massimi, double battti_recupero)
 	{
-		 double battiti_giornalieri = 0;
+		double battiti_giornalieri = 0;
 		battiti_giornalieri = (battti_riposo + battiti_massimi + battti_recupero) / 3;
 		return battiti_giornalieri;
+
+	}
+
+	// Script 5 variabiltà del battito cardiaco
+	VariabilitaBattito(double battiti_1, double battiti_2, double battiti_3, double battiti_4, double battiti_5)
+	{
+		double variazione = 0;
+		double min = 0;
+		double max = 0;
+		double[]battiti = { battiti_1, battiti_2, battiti_3, battiti_4, battiti_5}
+		for (int i = 0; i < 5; i++)
+		{
+			if (i ==0)
+			{
+				min = battiti[i];
+				max = battiti[i];
+			}
+
+			if (battiti[i]<min)
+			{
+				min = battiti[i];
+				
+			}
+
+			if (battiti[i] >max)
+			{
+				max = battiti[i];
+				
+			}
+
+
+
+		}
+		variazione = max - min;
+		return variazione;
 
 	}
 

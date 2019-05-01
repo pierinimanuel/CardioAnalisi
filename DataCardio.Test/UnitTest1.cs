@@ -72,5 +72,15 @@ namespace DataCardio.Test
 		}
 
 
+		// Script 5 variabiltà del battito cardiaco
+		[DataTestMethod]
+		[DataRow(55, 58, 60, 58, 54, 9)] // giorno1, giorno2 ,giorno3 ,giorno4, giorno5, variabilità del battito
+		[DataRow(54, 56, 58, 55, 52, 7)]
+		public void TestVariabilitaBattito(double battiti_1, double battiti_2, double battiti_3, double battiti_4, double battiti_5, double variabilità_battito_aspetatto)
+		{
+			double variabilità_battito = CardioLibrary.DataCardio.VariabilitaBattito(battiti_1, battiti_2, battiti_3, battiti_4, battiti_5);
+			Assert.AreEqual (variabilità_battito,variabilità_battito_aspetatto);
+		}
+
 	}
 }
