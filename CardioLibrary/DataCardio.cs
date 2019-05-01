@@ -89,4 +89,18 @@ namespace CardioLibrary
 		    }
 
          }
+
+
+	// Script 5 media giornaliera dei battiti cardiaci
+
+
+	public static double BattitiGiornalieri(double battti_riposo, double battiti_massimi, double battti_recupero)
+	{
+		 double battiti_giornalieri = 0;
+		battiti_giornalieri = (battti_riposo + battiti_massimi + battti_recupero) / 3;
+		return battiti_giornalieri;
+
+	}
+
+
 }

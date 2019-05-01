@@ -44,7 +44,7 @@ namespace DataCardio.Test
 		{
 			calorie_bruciate = CardioLibrary.DataCardio.CalorieBruciate(sesso, Frequenza_Cardiaca, peso, anni, tempo);
 
-			Asssert.AreEqual(calorie_bruciate_aspettate, calorie_bruciate);
+			Assert.AreEqual(calorie_bruciate_aspettate, calorie_bruciate);
 		}
 
 
@@ -55,11 +55,21 @@ namespace DataCardio.Test
 		public void TestSpesaEnergetica(string attività, double km_percorsi, double peso_corporeo, double spesa_energetica_aspettata)
 		{
 			Double spesa_energetica = CardioLibrary.DataCardio.SpesaEnergetica(attività, peso_corporeo, km_percorsi);
-			Asssert.AreEqual(spesa_energetica, spesa_energetica_aspettata);
+			Assert.AreEqual(spesa_energetica, spesa_energetica_aspettata);
 
 		}
 
+		// Script 5 media giornaliera dei battiti cardiaci
+		[DataTestMethod]
+		[DataRow(73, 120, 100, 92)] //  battiti a riposo battiti massimi, battiti di recupero, media giornaliera
+		[DataRow(70, 127, 102, 96)]
 
+		public void TestBattitiGiornalieri(double battti_riposo, double battiti_massimi, double battti_recupero, double battti_giornalieri_aspettati)
+		{
+			battiti_giornalieri = CardioLibrary.DataCardio.BattitiGiornalieri(battti_riposo, battiti_massimi, battti_recupero);
+			Assert.AreEqual(battiti_giornalieri, battti_giornalieri_aspettati);
+
+		}
 
 
 	}
